@@ -226,6 +226,13 @@ set wrap "Wrap lines
 
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" " => Editing
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set scrolloff=1
+map <leader>d S<Esc>
+
+
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => Moving around, tabs, windows and buffers
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " Treat long lines as break lines (useful when moving around in them)
