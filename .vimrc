@@ -67,114 +67,101 @@ filetype plugin indent on    " required
 " " show leader
 set showcmd
 " " map Enter to open a new line but not enter edit mode
-nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
-" "       http://amix.dk/vim/vimrc.html
-" "
-" " Raw_version: 
-" "       http://amix.dk/vim/vimrc.txt
-" "
-" " Sections:
-" "    -> General
-" "    -> VIM user interface
-" "    -> Colors and Fonts
-" "    -> Files and backups
-" "    -> Text, tab and indent related
-" "    -> Visual mode related
-" "    -> Moving around, tabs and buffers
-" "    -> Status line
-" "    -> Editing mappings
-" "    -> vimgrep searching and cope displaying
-" "    -> Spell checking
-" "    -> Misc
-" "    -> Helper functions
-" "
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-"
+
+
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => General
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " Sets how many lines of history VIM has to remember
-set history=700
+set history=1000
 set mouse=a
-"
-set relativenumber 
-set number          
+
+
+set relativenumber
+set number
 " " Set to auto read when a file is changed from the outside
 set autoread
-"
-" " With a map leader it's possible to do extra key combinations
-" " like <leader>w saves the current file
-" let mapleader = ","
-" let g:mapleader = ","
-"
+
+
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => VIM user interface
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set guifont=Roboto\ Mono\ Light\ 12
-nnoremap <Tab> <Esc>
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>
+ nnoremap <Tab> <Esc>
+ vnoremap <Tab> <Esc>gV
+ onoremap <Tab> <Esc>
+ inoremap <Tab> <Esc>`^
+ inoremap <Leader><Tab> <Tab>
+
 " " Turn on the WiLd menu
 set wildmenu
-"
+
 " " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
-"
+
+
 " "Always show current position
 set ruler
-"
+set cursorline
+set cursorcolumn
+
+
 " " Height of the command bar
-set cmdheight=2
-"
-" " A buffer becomes hidden when it is abandoned
-" set hid
-"
+set cmdheight=1
+
+
 " " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-"
+
+
 " " Ignore case when searching
 set ignorecase
-"
-" " When searching try to be smart about cases 
+
+
+" " When searching try to be smart about cases
 set smartcase
-"
+
+
 " " Highlight search results
 set hlsearch
-"
+
+
 " " Makes search act like search in modern browsers
 set incsearch
-"
+
+
 " " Don't redraw while executing macros (good performance config)
 set lazyredraw
-"
+
+
 " " For regular expressions turn magic on
-" set magic
-"
+set magic
+
+
 " " Show matching brackets when text indicator is over them
 set showmatch
 " " How many tenths of a second to blink when matching brackets
-set mat=2
-"
+set mat=5
+
+
 " " No annoying sound on errors
-set noerrorbells
 set novisualbell
-" set t_vb=
-" set tm=500
-"
-"
+
+
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => Colors and Fonts
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " Enable syntax highlighting
 syntax enable
-"
- colorscheme desert
+
+
+" colorscheme tender
+" colorscheme hybrid_material
+" colorscheme farout
+ colorscheme libertine
  set background=dark
 
  " Set extra options when running in GUI mode
