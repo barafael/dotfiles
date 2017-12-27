@@ -9,7 +9,6 @@ filetype off
 " Vundle Plugin Manager
 """""""""""""""""""""""""""
 
-
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -25,7 +24,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
-
 
 Plugin 'jaxbot/semantic-highlight.vim'
 
@@ -57,6 +55,9 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='distinguished'
+" let g:airline_theme='minimalist'
 
 Plugin 'terryma/vim-multiple-cursors'
 
@@ -169,6 +170,7 @@ set novisualbell
 " " Enable syntax highlighting
 syntax enable
 
+set t_Co=256
 
 " colorscheme tender
 " colorscheme hybrid_material
