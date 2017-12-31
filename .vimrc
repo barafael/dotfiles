@@ -1,8 +1,6 @@
 set shell=/bin/bash\ --login
 set shell=bash
 
-set nocompatible
-
 filetype off
 
 """""""""""""""""""""""""""
@@ -25,7 +23,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 
-Plugin 'jaxbot/semantic-highlight.vim'
+Plugin 'jaxbot/semantic-highlight.vim
 
 Plugin 'rust-lang/rust.vim'
 
@@ -136,6 +134,8 @@ set ignorecase
 
 " " When searching try to be smart about cases
 set smartcase
+
+set autoindent
 
 
 " " Highlight search results
