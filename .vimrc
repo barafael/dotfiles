@@ -18,12 +18,13 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 
-Plugin 'jaxbot/semantic-highlight.vim
+Plugin 'jaxbot/semantic-highlight.vim'
 
 Plugin 'rust-lang/rust.vim'
 
@@ -51,8 +52,13 @@ let g:syntastic_rust_checkers = ['rustc']
 Plugin 'luochen1990/rainbow'
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
+Plugin 'unblevable/quick-scope'
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
 let g:airline_powerline_fonts = 1
 let g:airline_theme='distinguished'
 " let g:airline_theme='minimalist'
@@ -60,6 +66,8 @@ let g:airline_theme='distinguished'
 Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Tabular'
+
+"Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -92,6 +100,7 @@ set mouse=a
 
 set relativenumber
 set number
+
 " " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -100,12 +109,11 @@ set autoread
 " " => VIM user interface
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set guifont=Roboto\ Mono\ Light\ 12
- nnoremap <Tab> <Esc>
- vnoremap <Tab> <Esc>gV
- onoremap <Tab> <Esc>
- inoremap <Tab> <Esc>`^
- inoremap <Leader><Tab> <Tab>
-
+nnoremap <Tab> <Esc>
+vnoremap <Tab> <Esc>gV
+onoremap <Tab> <Esc>
+inoremap <Tab> <Esc>`^
+inoremap <Leader><Tab> <Tab>
 " " Turn on the WiLd menu
 set wildmenu
 
@@ -120,8 +128,7 @@ set cursorcolumn
 
 
 " " Height of the command bar
-set cmdheight=1
-
+set cmdheight=2
 
 " " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -229,7 +236,6 @@ set wrap "Wrap lines
 " " => Editing
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set scrolloff=1
-map <leader>d S<Esc>
 
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
