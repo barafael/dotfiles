@@ -67,6 +67,36 @@ Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Tabular'
 
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+let g:ctrlp_use_caching = 0
+let g:ctrlp_match_window_reversed = 0
+
+Plugin 'wellle/targets.vim'
+
+Plugin 'scrooloose/nerdtree'
+let NERDTreeHijackNetrw = 0
+noremap <silent> <leader>n :NERDTreeToggle<CR> <C-w>=
+noremap <silent> <leader>f :NERDTreeFind<CR> <C-w>=
+
+function! NERDTreeRefresh()
+    if &filetype == "nerdtree"
+        silent exe substitute(mapcheck("R"), "<CR>", "", "")
+    endif
+endfunction
+
+autocmd BufEnter * call NERDTreeRefresh()
+
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+let g:NERDTreeUpdateOnCursorHold = 0
+
+Plugin 'tpope/vim-surround'
+
+Plugin 'tpope/vim-fugitive'
+noremap <leader>gb :Gblame<CR>
+
+Plugin 'tpope/vim-endwise'
+
 "Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
