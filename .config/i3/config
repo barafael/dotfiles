@@ -42,6 +42,7 @@ bindsym $mod+Return exec konsole
 exec --no-startup-id nm-applet
 
 bindsym $mod+c exec chromium
+bindsym $mod+n exec ~/i3-dolphin.sh
 
 ## quick terminal
 exec --no-startup-id yakuake 
