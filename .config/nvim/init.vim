@@ -10,7 +10,11 @@ call remote#host#RegisterPlugin('python3', '/home/ra/.local/share/nvim/plugged/n
             \ {'sync': v:false, 'name': 'TeardownPlatformioEnvironment', 'type': 'function', 'opts': {}},
             \ ])
 
-set runtimepath+=~/.vim
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
