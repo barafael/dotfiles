@@ -5,10 +5,17 @@ let g:python_host_prog  = '/usr/bin/python3'
 let g:python2_host_prog  = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
 
+call remote#host#RegisterPlugin('python3', '/home/ra/.local/share/nvim/plugged/neomake-platformio/rplugin/python/neomake-platformio.py', [
+            \ {'sync': v:false, 'name': 'SetupPlatformioEnvironment', 'type': 'function', 'opts': {}},
+            \ {'sync': v:false, 'name': 'TeardownPlatformioEnvironment', 'type': 'function', 'opts': {}},
+            \ ])
+
+set runtimepath+=~/.vim
+
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Make sure you use single quotes
 
@@ -38,6 +45,9 @@ let g:airline#extensions#ale#enabled = 1
 " 
 " " let g:syntastic_debug = 1
 " " let g:syntastic_debug_file = "~/syntastic.log"
+
+Plug 'coddingtonbear/neomake-platformio'
+call SetupPlatformioEnvironment('/home/ra/Code/raPID/')
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
@@ -190,7 +200,7 @@ set novisualbell
 " " Enable syntax highlighting
 syntax enable
 
-set t_Co=256
+set termguicolors
 set background=dark
 
 " colorscheme tender
