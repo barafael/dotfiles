@@ -1,0 +1,10 @@
+[user]
+	email = mediumendian@gmail.com
+	name = Rafael Bachmann
+[credential]
+	helper = cache
+[help]
+	autocorrect = 1
+[alias]
+	psuh = push
+	please = push --force-with-lease
