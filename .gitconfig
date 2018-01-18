@@ -1,10 +1,26 @@
 [user]
 	email = mediumendian@gmail.com
-	name = Rafael Bachmann
-[credential]
-	helper = cache
+	name  = Rafael Bachmann
+
+[core]
+	editor = vim
+	excludesfile = $HOME/.gitignore_global
 [help]
 	autocorrect = 1
+[credential]
+	helper = cache
 [alias]
-	psuh = push
+    pre = pull --rebase
+    ci  = commit
+    st  = status
+    ch  = checkout
+    pl  = pull
+    pu  = push
+    ps  = push
+    a   = add
+    b   = branch
+	pill = pull
 	please = push --force-with-lease
+
+[diff]
+	submodule = log
