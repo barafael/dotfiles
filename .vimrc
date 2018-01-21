@@ -116,6 +116,8 @@ nmap <CR> o<Esc>
 set history=1000
 set mouse=a
 
+imap jf <Esc>
+imap fj <Esc>
 
 set relativenumber
 set number
