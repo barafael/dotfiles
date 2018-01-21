@@ -41,7 +41,7 @@ bindsym $mod+Return exec konsole
 
 exec --no-startup-id nm-applet
 
-exec --no-startup-id conky
+# exec --no-startup-id conky
 
 bindsym $mod+c exec chromium
 bindsym $mod+n exec ~/i3-dolphin.sh
