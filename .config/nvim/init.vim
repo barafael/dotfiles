@@ -76,10 +76,14 @@ Plug 'terryma/vim-multiple-cursors'
 
 Plug 'godlygeek/Tabular'
 
+Plug 'majutsushi/tagbar'
+nnoremap <silent> <Leader>tb :TagbarToggle<CR>
+
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_match_window_reversed = 0
+nnoremap <leader>p :CtrlPTag<cr>
 
 Plug 'wellle/targets.vim'
 
