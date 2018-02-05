@@ -25,6 +25,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'jaxbot/semantic-highlight.vim'
 
+Plug 'rhysd/vim-clang-format'
+noremap <leader>cf :ClangFormat<CR>
+
 Plug 'rust-lang/rust.vim'
 
 Plug 'w0rp/ale'
