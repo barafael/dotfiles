@@ -314,8 +314,8 @@ set viminfo^=%
 set laststatus=2
 
 " " Move a line of text using CTRL+[jk]
-nmap <C-j> mz:m+<cr>`z
-nmap <C-k> mz:m-2<cr>`z
+nmap <C-j> mz:m+<cr>`z==
+nmap <C-k> mz:m-2<cr>`z==
 " vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 " vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
