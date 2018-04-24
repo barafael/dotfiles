@@ -55,7 +55,7 @@ Plug 'unblevable/quick-scope'
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
