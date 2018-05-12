@@ -90,7 +90,10 @@ function! NERDTreeRefresh()
     endif
 endfunction
 
-autocmd BufEnter * call NERDTreeRefresh()
+augroup NTREERefresh
+    autocmd!
+    autocmd BufEnter * call NERDTreeRefresh()
+augroup END
 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeUpdateOnCursorHold = 0
@@ -101,8 +104,6 @@ Plug 'tpope/vim-fugitive'
 noremap <leader>gb :Gblame<CR>
 
 Plug 'tpope/vim-endwise'
-
-"Plug 'wincent/command-t'
 
 " Initialize plugin system
 call plug#end()
@@ -117,7 +118,6 @@ set showcmd
 nmap <CR> o<Esc>
 
 
-
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => General
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -125,9 +125,12 @@ nmap <CR> o<Esc>
 set history=1000
 set mouse=a
 
+" Home Row Escape
 imap jf <Esc>
 imap fj <Esc>
+imap jj <Esc>
 
+" show relative numbers except on current cursor line
 set relativenumber
 set number
 
@@ -144,6 +147,7 @@ vnoremap <Tab> <Esc>gV
 onoremap <Tab> <Esc>
 inoremap <Tab> <Esc>`^
 inoremap <Leader><Tab> <Tab>
+
 " " Turn on the WiLd menu
 set wildmenu
 
@@ -158,7 +162,7 @@ set cursorcolumn
 
 
 " " Height of the command bar
-set cmdheight=2
+set cmdheight=4
 
 " " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -205,7 +209,6 @@ set novisualbell
 " " => Colors and Fonts
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " Enable syntax highlighting
-syntax enable
 
 set t_Co=256
 set background=dark
@@ -252,13 +255,13 @@ set expandtab
 set smarttab
 
 
-" " 1 tab == 4 spaces
+set tabstop=8
+set softtabstop=4
 set shiftwidth=4
-set tabstop=4
+set expandtab
 
+set autoindent
 
-set ai "Auto indent
-set si "Smart indent
 set wrap "Wrap lines
 
 
@@ -295,11 +298,14 @@ map <silent> <leader><cr> :noh<cr>
 map <leader>bd :Bclose<cr>
 
 
-" Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-            \ if line("'\"") > 0 && line("'\"") <= line("$") |
-            \   exe "normal! g`\"" |
-            \ endif
+" Return to last edit position when opening files
+augroup rememberLastPos
+    autocmd!
+    autocmd BufReadPost *
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \   exe "normal! g`\"" |
+                \ endif
+augroup END
 
 " Remember info about open buffers on close
 
