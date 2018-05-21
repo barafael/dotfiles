@@ -1,4 +1,3 @@
-set shell=/bin/bash\ --login
 set shell=bash
 
 let g:python_host_prog  = '/usr/bin/python3'
@@ -51,7 +50,6 @@ let g:airline#extensions#ale#enabled = 1
 " let g:syntastic_rust_rustc_args = '--'
 " let g:syntastic_rust_checkers = ['rustc']
 " 
-" " let g:syntastic_debug = 1
 " " let g:syntastic_debug_file = "~/syntastic.log"
 
 Plug 'coddingtonbear/neomake-platformio'
@@ -226,18 +224,6 @@ set background=dark
 " colorscheme hybrid_material
 " colorscheme farout
 colorscheme libertine
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions+=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
-
-" Set utf8 as standard encoding and en_US as the standard
-" language
-set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
