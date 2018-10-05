@@ -5,6 +5,7 @@
 [core]
 	editor = vim
 	excludesfile = $HOME/.gitignore_global
+	commitGraph = true
 [help]
 	autocorrect = 1
 [credential]
