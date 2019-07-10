@@ -4,12 +4,6 @@ let g:python_host_prog  = '/usr/bin/python3'
 let g:python2_host_prog  = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
 
-" '~' in path seems to not work?
-call remote#host#RegisterPlugin('python3', '/home/ra/.local/share/nvim/plugged/neomake-platformio/rplugin/python/neomake-platformio.py', [
-            \ {'sync': v:false, 'name': 'SetupPlatformioEnvironment', 'type': 'function', 'opts': {}},
-            \ {'sync': v:false, 'name': 'TeardownPlatformioEnvironment', 'type': 'function', 'opts': {}},
-            \ ])
-
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -51,9 +45,6 @@ let g:airline#extensions#ale#enabled = 1
 " let g:syntastic_rust_checkers = ['rustc']
 " 
 " " let g:syntastic_debug_file = "~/syntastic.log"
-
-Plug 'coddingtonbear/neomake-platformio'
-call SetupPlatformioEnvironment('/home/ra/Code/raPID/')
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
