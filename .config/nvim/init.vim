@@ -17,6 +17,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Make sure you use single quotes
 
+Plug 'arzg/vim-colors-xcode'
+
 Plug 'jaxbot/semantic-highlight.vim'
 
 Plug 'rhysd/vim-clang-format'
@@ -214,7 +216,7 @@ set background=dark
 " colorscheme tender
 " colorscheme hybrid_material
 " colorscheme farout
-colorscheme libertine
+colorscheme xcodedark
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
