@@ -1,3 +1,5 @@
+sudo pacman -S $(echo $(cat applications | cut -d' ' -f1))
+
 adobe-source-code-pro-fonts
 arduino
 arm-none-eabi-binutils
@@ -107,7 +109,6 @@ pngquant
 polari
 powerline
 powerline-fonts
-processing
 python-matplotlib
 python-pandas
 python-pip
@@ -121,7 +122,6 @@ qtcreator
 qutebrowser
 recoll
 redshift
-refind-efi
 ripgrep
 rofi
 sddm
@@ -134,9 +134,6 @@ spectacle
 steam
 stellarium
 stlink
-swig
-syncthing
-syncthing-gtk
 telegram-desktop
 texinfo
 texlive-bibtexextra
