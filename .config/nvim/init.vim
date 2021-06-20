@@ -213,11 +213,6 @@ set novisualbell
 set termguicolors
 set background=dark
 
-" colorscheme tender
-" colorscheme hybrid_material
-" colorscheme farout
-colorscheme xcodedark
-
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
