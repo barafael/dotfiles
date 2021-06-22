@@ -208,6 +208,8 @@ set novisualbell
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => Colors and Fonts
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+colorscheme xcodedarkhc
 " " Enable syntax highlighting
 
 set termguicolors
